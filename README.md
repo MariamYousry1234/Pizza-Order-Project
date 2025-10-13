@@ -3,4 +3,4 @@
 A simple Pizza Order application built with C# Windows Forms.
 
 ## Screenshot
-![Pizza Project Screenshot](https://github.com/MariamYousry/Pizza-Order-Project/blob/main/PizzaForm.png)
+![Pizza Project Screenshot](https://github.com/MariamYousry1234/Pizza-Order-Project/blob/master/Pizza%20Order%20Project.PNG?raw=true)
