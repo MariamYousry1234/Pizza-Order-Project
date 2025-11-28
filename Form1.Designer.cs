@@ -60,11 +60,14 @@ namespace Pizza_Project
             this.txtWhereToEat = new System.Windows.Forms.TextBox();
             this.gpGroupSummary = new System.Windows.Forms.GroupBox();
             this.txtTotalPrice = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.gpSize.SuspendLayout();
             this.gpToppings.SuspendLayout();
             this.gpCrustType.SuspendLayout();
             this.gpWhereToEat.SuspendLayout();
             this.gpGroupSummary.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // labMakePizza
@@ -317,7 +320,7 @@ namespace Pizza_Project
             this.btnOrderPizza.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnOrderPizza.Font = new System.Drawing.Font("Lucida Console", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOrderPizza.ForeColor = System.Drawing.Color.Black;
-            this.btnOrderPizza.Location = new System.Drawing.Point(46, 610);
+            this.btnOrderPizza.Location = new System.Drawing.Point(52, 676);
             this.btnOrderPizza.Name = "btnOrderPizza";
             this.btnOrderPizza.Size = new System.Drawing.Size(249, 53);
             this.btnOrderPizza.TabIndex = 5;
@@ -329,7 +332,7 @@ namespace Pizza_Project
             // 
             this.btnResetForm.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnResetForm.Font = new System.Drawing.Font("Lucida Console", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnResetForm.Location = new System.Drawing.Point(374, 610);
+            this.btnResetForm.Location = new System.Drawing.Point(414, 676);
             this.btnResetForm.Name = "btnResetForm";
             this.btnResetForm.Size = new System.Drawing.Size(249, 53);
             this.btnResetForm.TabIndex = 6;
@@ -468,12 +471,53 @@ namespace Pizza_Project
             this.txtTotalPrice.TabIndex = 17;
             this.txtTotalPrice.Text = "$ 0";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(107, 595);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(288, 37);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Number Of Pizza :";
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown1.ForeColor = System.Drawing.Color.Red;
+            this.numericUpDown1.Location = new System.Drawing.Point(415, 593);
+            this.numericUpDown1.Maximum = new decimal(new int[] {
+            200,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.ReadOnly = true;
+            this.numericUpDown1.Size = new System.Drawing.Size(120, 46);
+            this.numericUpDown1.TabIndex = 13;
+            this.numericUpDown1.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
+            this.numericUpDown1.Enter += new System.EventHandler(this.numericUpDown1_Enter);
+            // 
             // frmPizzaOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Pizza_Project.Properties.Resources.Pizza_Photo;
-            this.ClientSize = new System.Drawing.Size(1179, 728);
+            this.ClientSize = new System.Drawing.Size(1179, 750);
+            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.gpGroupSummary);
             this.Controls.Add(this.btnResetForm);
             this.Controls.Add(this.btnOrderPizza);
@@ -496,6 +540,7 @@ namespace Pizza_Project
             this.gpWhereToEat.PerformLayout();
             this.gpGroupSummary.ResumeLayout(false);
             this.gpGroupSummary.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -534,6 +579,8 @@ namespace Pizza_Project
         private System.Windows.Forms.TextBox txtWhereToEat;
         private System.Windows.Forms.GroupBox gpGroupSummary;
         private System.Windows.Forms.TextBox txtTotalPrice;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
     }
 }
 

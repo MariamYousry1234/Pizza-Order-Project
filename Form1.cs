@@ -91,11 +91,16 @@ namespace Pizza_Project
             return 0f;
         }
 
+        float GetHowManyPizza()
+        {
+            return (float)numericUpDown1.Value;
+        }
         float GetTotalPrice()
         {
-            return GetTotalSize() + GetTotalToppings() + GetTotalCrustType();
+            return (GetTotalSize() + GetTotalToppings() + GetTotalCrustType()) * GetHowManyPizza();
         }
 
+ 
         void UpdateTotalPrice()
         {
             txtTotalPrice.Text = " $ " + Convert.ToString(GetTotalPrice());
@@ -150,10 +155,10 @@ namespace Pizza_Project
                 sToppings += "Green Peppers";
             }
 
-           // txtToppings.Text = "";
             txtToppings.Text = sToppings;
             UpdateTotalPrice();
         }
+
         string ShowDetailsToConfirm()
         {
             string Results = "";
@@ -260,8 +265,6 @@ namespace Pizza_Project
 
         private void chkMushrooms_CheckedChanged(object sender, EventArgs e)
         {
-
-          
             UpdateToppings();
         }
 
@@ -334,8 +337,17 @@ namespace Pizza_Project
 
         private void chkGreenPeppers_CheckedChanged(object sender, EventArgs e)
         {
-        
             UpdateToppings();
+        }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+            UpdateTotalPrice();
+        }
+
+        private void numericUpDown1_Enter(object sender, EventArgs e)
+        {
+            this.ActiveControl = null;
         }
     }
 }
